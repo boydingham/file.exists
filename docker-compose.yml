@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  junction_issue_reproducer:
+    image: expected_behavior
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - "${SOURCE}:${DESTINATION}"
